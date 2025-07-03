@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloud & Hosting Solutions</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+      <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
@@ -34,7 +36,7 @@
         scroll-behavior: smooth;
       }
       body {
-        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+         font-family: "Inter", sans-serif;
       }
     </style>
   </head>
@@ -206,19 +208,23 @@
           <div class="space-y-8">
             <div>
               <h1
+              data-aos="fade-up"
+               data-aos-duration="1000"
                 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
               >
                 Cloud & Hosting
                 <span class="text-brand-blue block">Solutions</span>
               </h1>
-              <p class="text-lg text-gray-600 mt-4 max-w-lg">
+              <p data-aos="fade-up"
+               data-aos-duration="1000" class="text-lg text-gray-600 mt-4 max-w-lg">
                 Get reliable Cloud, VPS, hosting, business email, domain
                 services, and more.
               </p>
             </div>
 
             <!-- Client Testimonial -->
-            <div class="flex items-center space-x-3">
+            <div data-aos="fade-up"
+               data-aos-duration="1000" class="flex items-center space-x-3">
               <div class="flex -space-x-2">
                 <img src="./images/Hero Stat Icons.png" alt="" />
               </div>
@@ -237,11 +243,15 @@
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <button
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
                   class="bg-brand-blue text-white px-8 py-3 rounded-full transition-colors"
                 >
                   Get Started
                 </button>
                 <button
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
                   class="border text-brand-navy px-8 py-3 rounded-full font- border-brand-navy transition-colors"
                 >
                   Our Services
@@ -251,7 +261,7 @@
           </div>
 
           <!-- Right Content - Image and Stats -->
-          <div class="relative">
+          <div  class="relative">
             <div class="relative">
               <img
                 src="./images/Hero Image Container.png"
@@ -320,10 +330,10 @@
       <div
         class="section-title flex justify-center items-center flex-col text-center mb-10"
       >
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        <h2 class="text-5xl font-light text-gray-900 mb-4">
           Explore <span class="text-brand-blue">Perfect Plan</span>
         </h2>
-        <p class="text-gray-600">
+        <p class="text-gray-600 mb-20">
           Start Smart, Scale Fast—ZenexCloud Powers Your Growth with Simple,
           Scalable Hosting
         </p>
@@ -334,6 +344,8 @@
         >
           <!-- ZenLite Plan -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 relative lg:h-[1145px]"
           >
             <div class="mb-6">
@@ -345,7 +357,7 @@
             </div>
 
             <!-- Pricing -->
-            <div class="mb-6">
+            <div  class="mb-6">
               <div class="flex items-baseline space-x-2 mb-2">
                 <span class="text-sm text-gray-500 line-through"
                   >US$ 10.99</span
@@ -627,10 +639,13 @@
 
           <!-- ZenCore Plan (Most Popular) -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-xl border-2 border-brand-navy p-8 relative transform scale-105 lg:h-[1120px]"
           >
             <!-- Most Popular Badge -->
             <div
+            
               class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-full scale-x-[1.01]"
             >
               <div
@@ -961,6 +976,8 @@
 
           <!-- ZenPro Plan -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 relative lg:h-[1145px]"
           >
             <div class="mb-6">
@@ -1293,12 +1310,14 @@
     <section class="py-16 px-5 lg:px-0" id="hosting">
       <div class="px-10 mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 class="xl:text-5xl lg:text-[36px] text-[26px]  font-light text-gray-900">
             Quick <span class="text-brand-blue">Service Navigator</span>
           </h2>
         </div>
 
         <div
+        data-aos="fade-left"
+               data-aos-duration="1000"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8"
         >
           <!-- Hosting -->
@@ -1516,7 +1535,8 @@
         </div>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-aos="fade-up"
+               data-aos-duration="1000" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Web Hosting -->
           <div
             class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
@@ -1795,7 +1815,8 @@
             </h2>
 
             <!-- Features List -->
-            <div class="space-y-6">
+            <div data-aos="fade-up"
+               data-aos-duration="1000" class="space-y-6">
               <!-- Secure -->
               <div class="flex items-center space-x-4">
                 <img src="./images/Icon container.png" />
@@ -1877,6 +1898,8 @@
       </div>
       <div class="max-w-6xl mx-auto text-center">
         <h2
+        data-aos="fade-up"
+               data-aos-duration="1000"
           class="text-xl sm:text-4xl font-medium text-gray-900 mb-8 leading-tight"
         >
           Switch to ZenexCloud — the high-performance, secure, and scalable
@@ -1885,11 +1908,15 @@
 
         <div class="flex flex-row gap-4 justify-center">
           <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
             class="bg-brand-blue text-white px-9 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors"
           >
             Sign Up
           </button>
           <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
             class="bg-brand-navy text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-900 transition-colors"
           >
             View Plans
@@ -2191,6 +2218,9 @@
       </div>
     </footer>
     <script>
+
+      // Initialize AOS
+      AOS.init();
       const menuToggle = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
 
