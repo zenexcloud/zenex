@@ -43,20 +43,22 @@
 
   <body class="">
     <!-- Header/Navigation -->
-    <header
+   <header
       class="bg-white border-b border-gray-300 sticky top-0 z-50 py-[14px]"
     >
       <div class="max-w-[1790px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center lg:space-x-8">
-            <img
+            <a href="/index.html">
+              <img
               src="./images/Logo-01.png"
               alt="Logo"
               class="lg:w-[244px] h-auto"
             />
+            </a>
             <nav
-              class="hidden md:flex items-center space-x-12 mt-3 font-medium"
+              class="hidden xl:flex items-center space-x-12 mt-3 font-medium"
             >
               <a href="#" class="font-[600]">Home</a>
               <a
@@ -76,7 +78,7 @@
               >
 
               <!-- Dropdown -->
-              <div class="relative group">
+              <div class="relative group ">
                 <button
                   class="flex items-center text-[#004964] hover:text-[#00B1F3] transition focus:outline-none font-[600]"
                 >
@@ -96,7 +98,7 @@
                 <div
                   class="absolute hidden group-hover:block bg-[#E3F4FB] w-[250px] text-base font-extralight top-[25px] z-10"
                 >
-                  <a
+                   <a
                     href="./managed-cloud.html"
                     class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
                     >Managed Cloud</a
@@ -114,7 +116,7 @@
           <!-- Desktop Menu -->
 
           <!-- Auth Buttons -->
-          <div class="hidden md:flex items-center gap-8 font-bold">
+          <div class="hidden xl:flex items-center gap-8 font-bold">
             <button
               class="text-gray-700 hover:text-gray-900 font-semibold transition-colors"
             >
@@ -128,7 +130,7 @@
           </div>
 
           <!-- Mobile Menu Toggle -->
-          <div class="md:hidden flex items-center">
+          <div class="xl:hidden flex items-center">
             <button id="menu-toggle" class="text-gray-700 focus:outline-none">
               <svg
                 class="w-6 h-6"
@@ -1307,7 +1309,7 @@
     </section>
 
     <!-- Quick Service Navigator -->
-    <section class="py-16 px-5 lg:px-0" id="hosting">
+    <section class="py-16 px-5 lg:px-0 overflow-hidden" id="hosting">
       <div class="px-10 mx-auto">
         <div class="text-center mb-12">
           <h2 class="xl:text-5xl lg:text-[36px] text-[26px]  font-light text-gray-900">
@@ -1527,7 +1529,7 @@
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#E6EFF3]" id="compute">
       <div class="max-w-[1320px] mx-auto">
         <!-- Section Header -->
-        <div class="text-center mb-12 mb-[60px]">
+        <div class="text-center mb-[60px]">
           <h2 class="text-4xl sm:text-5xl font-light">
             <span class="text-brand-navy">Our </span>
             <span class="text-brand-blue">Services</span>
