@@ -36,6 +36,33 @@
       body {
         font-family: "Poppins", "Segoe UI", Arial, sans-serif;
       }
+
+       /* Bounce Y animation */
+      @keyframes bounceY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10%);
+        }
+      }
+
+      .bounceY {
+        animation: bounceY 15s infinite;
+      }
+
+      .cursor {
+        display: inline-block;
+        color: #00adef;
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
     </style>
   </head>
 
@@ -48,11 +75,13 @@
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center lg:space-x-8">
-            <img
+            <a href="/index.html">
+              <img
               src="./images/Logo-01.png"
               alt="Logo"
               class="lg:w-[244px] h-auto"
             />
+            </a>
             <nav
               class="hidden md:flex items-center space-x-12 mt-3 font-medium"
             >
@@ -73,8 +102,8 @@
                 >Domain</a
               >
 
-              <!-- Dropdown -->
-              <div class="relative group">
+             <!-- Dropdown -->
+              <div class="relative group ">
                 <button
                   class="flex items-center text-[#004964] hover:text-[#00B1F3] transition focus:outline-none font-[600]"
                 >
@@ -92,17 +121,17 @@
                   </svg>
                 </button>
                 <div
-                  class="absolute hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md mt-2 w-40 z-10"
+                  class="absolute hidden group-hover:block bg-[#E3F4FB] w-[250px] text-base font-extralight top-[25px] z-10"
                 >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-[#004964] hover:bg-gray-100 hover:text-[#00B1F3] transition"
-                    >MenuCloud</a
+                   <a
+                    href="./managed-cloud.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >Managed Cloud</a
                   >
                   <a
-                    href="#"
-                    class="block px-4 py-2 text-[#004964] hover:bg-gray-100 hover:text-[#00B1F3] transition"
-                    >DevOps</a
+                    href="./devops-and-automation.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >DevOps And Automation</a
                   >
                 </div>
               </div>
@@ -223,7 +252,7 @@
 
           <!-- Right Content - Image and Stats -->
           <div class="relative">
-            <div class="relative">
+            <div class="relative bounceY">
               <img
                 src="./images/computer/computer1.png"
                 alt="Professional working on laptop"
