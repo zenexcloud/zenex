@@ -24,7 +24,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
-      @theme {
+       @theme {
         --color-brand-blue: #00adef;
         --color-brand-navy: #005c88;
       }
@@ -50,6 +50,90 @@
       body {
         font-family: "Poppins", sans-serif;
       }
+  
+
+    .testimonial shadow-lg p-6 rounded-xl space-y-2 {
+      /* display: inline-block; */
+      width: 334px;
+      /* height: fit-content!; */
+      /* margin: 0 10px; */
+      /* height: 252px; */
+      background: #fff;
+      border-radius: 12px;
+      
+      padding: 20px;
+      /* box-sizing: border-box;
+      vertical-align: top; */
+    }
+
+    /* .testimonial shadow-lg p-6 rounded-xl space-y-2 img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    } */
+
+    /* .testimonial shadow-lg p-6 rounded-xl space-y-2 h4 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+    }
+
+    .testimonial shadow-lg p-6 rounded-xl space-y-2 p {
+      font-size: 14px;
+      color: #555;
+    } */
+
+    /* .testimonial shadow-lg p-6 rounded-xl space-y-2 span {
+      display: block;
+      font-size: 13px;
+      color: #999;
+    } */
+
+
+    /* Marquee css */
+    
+.marquee {
+    margin: 0em 10px;
+}
+.marquee-box-one {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* margin: 3em 0 0 0; */
+}
+.marquee-content-one {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    animation: scroll-one 30s linear infinite;
+}
+.marquee-box-two {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* margin: 3em 0 6em 0; */
+}
+.marquee-content-two {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    animation: scroll-two 30s linear infinite;
+}
+
+.marquee-text:hover {
+    background-color: #31393F;
+    border: 1px solid #31393F;
+}
+
+@keyframes scroll-one {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes scroll-two {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
 
     
     </style>
@@ -324,6 +408,585 @@
           </div>
         </section>
      
+    </section>
+
+     <!-- Meet Founder Section -->
+     <section class="max-w-[1320px] mx-auto lg:px-0 px-5">
+        <h2 class="xl:text-[40px] lg:text-[36px] text-[26px] font-semibold text-center text-[#004964]">Meet the Founder</h2>
+        <div class="flex lg:flex-row flex-col gap-x-5 mt-[50px]">
+            <!-- Founder -->
+             <div class="space-y-5">
+                <!-- Founder Image -->
+                 <img src="./images/about/founder.png" class="xl:h-[628px] xl:w-[638px] object-contain" alt="Founder"/>
+                 <div>
+                    <p class="text-[#005C88] lg:text-[32px] text-[24px] font-semibold">Founder & CEO</p>
+                    <p class="text-[#00ADEF] lg:text-[40px] text-[32px] font-bold">Muhammad Monir Hossain</p>
+                    <p class="text-[#62676C] lg:text-2xl text-lg font-normal">
+                        With a background in softwaqre architecture and cloud systems, Muhammad Monir Hossain started ZenexCloud to build a hosting company that's easy to use, lightning-fast, and built for scale
+                    </p>
+                 </div>
+             </div>
+
+             <!-- CTO -->
+             <div class="space-y-5 mt-[100px]">
+                <!-- CTO Image -->
+                     <img src="./images/about/cto.png"  class="xl:h-[628px] xl:w-[638px] object-contain" alt="Founder"/>
+
+                 <div>
+                    <p class="text-[#005C88] lg:text-[32px] text-[24px] font-semibold">CTO</p>
+                    <p class="text-[#00ADEF] lg:text-[40px] text-[32px] font-bold">Rakiul Islam</p>
+                    <p  class="text-[#62676C] lg:text-2xl text-lg font-normal">
+                        An expert in infrastructure automation and secure systems, Rakibul islamm ensures ZenexCloud's backend runs like clockwork, offering unparalleled uptime and security
+                    </p>
+                 </div>
+             </div>
+        </div>
+     </section>
+
+     <!-- Why Choose ZenexCloud? -->
+     <section class="max-w-[1320px] mx-auto my-[100px] lg:px-0 px-5">
+         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <!-- Left Content - Features -->
+          <div class="space-y-10">
+            <h2
+              class="text-2xl md:text-3xl lg:text-[40px] font-semibold mb-12 text-[#004964] tracking-tighter leading-tight"
+            >
+              Why Choose <span class="text-brand-blue">ZenexCloud?</span>
+            </h2>
+
+            <!-- Features List -->
+            <div class="space-y-6">
+              <!-- Secure -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container.png" />
+                <div>
+                  <h3 class="text-2xl font-normal text-brand-navy mb-2">Cloud Security</h3>
+                  <p class="text-gray-600 text-base">
+                    Enterprise-grade firewalls, IAM, GDPR/ISO compliance
+                  </p>
+                </div>
+              </div>
+
+              <!-- Speed -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-1.png" />
+                <div>
+                  <h3 class="text-2xl font-normal text-brand-navy mb-2">Speed</h3>
+                  <p class="text-gray-600">
+                    Global CDN, SSD/NVMe storage, ultra-fast loading
+                  </p>
+                </div>
+              </div>
+
+              <!-- Scalability -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-2.png" alt="" />
+                <div>
+                  <h3 class="text-2xl font-normal text-brand-navy mb-2">Scalability</h3>
+                  <p class="text-gray-600">From solopreneurs to enterprises</p>
+                </div>
+              </div>
+
+              <!-- Support -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-3.png" alt="" />
+                <div>
+                  <h3 class="text-2xl font-normal text-brand-navy mb-2">Real Support</h3>
+                  <p class="text-gray-600">24/7 expert humans—not bots</p>
+                </div>
+              </div>
+              <!-- Global Infrastructure -->
+              <div class="flex items-center space-x-4">
+                <img
+                  src="./images/Icon-container-4.png"
+                  class="max-h-[90px]"
+                  alt=""
+                />
+                <div>
+                  <h3 class="text-2xl font-normal text-brand-navy mb-2">
+                    Global Infrastructure
+                  </h3>
+                  <p class="text-gray-600">
+                    Deployed across top-tier data centers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content - Images -->
+          <div class="relative">
+            <div class="relative">
+              <!-- Main Image -->
+              <div class="relative z-10">
+                <img
+                  src="./images/computer/man.png"
+                  class="md:max-w-[90%]"
+                  alt="Professional working in data center"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+
+     <!-- Trusted by 3+ million website owners worlwide -->
+     <section>
+        <h2 class="xl:text-[40px] lg:text-[36px] text-[26px] font-semibold text-[#004964] text-center">Trusted by 3+ million website owners worlwide</h2>
+        <!-- client review -->
+<div class="wrapper overflow-hidden lg:px-0 px-5">
+    <!-- marquee right to left -->
+	
+<div class="marquee">
+  <div class="marquee-box-one mb-8 mt-[50px]">
+    <div class="marquee-content-one">
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client1.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client2.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client3.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client4.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <!-- content-dublicate -->
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client5.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client6.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client7.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client8.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+    </div>
+    <div class="marquee-content-one">
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client1.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+     <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client2.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client3.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client4.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <!-- content-dublicate -->
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client5.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client6.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client7.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client8.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+    </div> <!-- marquee-content -->
+  </div> <!-- marquee-box-two -->
+
+  <div class="marquee-box-two">
+    <div class="marquee-content-two">
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client1.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client2.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client3.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client4.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <!-- content-dublicate -->
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client5.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client6.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client7.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client8.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+    </div>
+    <div class="marquee-content-two">
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client1.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+     <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client2.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client3.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client4.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+       <!-- content-dublicate -->
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client5.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client6.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+       <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client7.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+      <div class="testimonial shadow-lg p-6 rounded-xl space-y-2">
+        <div class="flex items-center gap-2">
+               <div class="w-[72px] h-[72px] rounded-full overflow-hidden">
+                <img src="./images/about/client8.png" class="w-full h-full" alt="">
+            </div>
+            <div>
+                <h4 class="text-2xl font-normal text-[#151C24]">Katie Sims</h4>
+                <span class="text-lg font-normal text-[#93979A]">j.jones@outlook.com</span>
+            </div>
+        </div>
+        <p>Since switching to ZenexCloud, our website performance and security have improved drastically. Their support team is unmatched.</p>
+      </div>
+    </div> <!-- marquee-content -->
+  </div> <!-- marquee-box-two -->
+</div> <!-- marquee -->
+
+</div>
+     </section>
+
+
+     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#E6EFF3] relative">
+      <div>
+        <img
+          src="./images/Vector.png"
+          alt=""
+          class="absolute top-0 right-0 opacity-10"
+        />
+      </div>
+      <div>
+        <img
+          src="./images/Vector.png"
+          alt=""
+          class="absolute bottom-0 left-0 opacity-10 rotate-180"
+        />
+      </div>
+      <div class="max-w-6xl mx-auto text-center">
+        <h2
+        data-aos="fade-up"
+               data-aos-duration="1000"
+          class="text-xl sm:text-4xl font-medium text-gray-900 mb-8 leading-tight"
+        >
+          Switch to ZenexCloud — the high-performance, secure, and scalable
+          cloud platform trusted by startups and enterprises alike
+        </h2>
+
+        <div class="flex flex-row gap-4 justify-center">
+          <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
+            class="bg-brand-blue text-white px-9 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors"
+          >
+            Sign Up
+          </button>
+          <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
+            class="bg-brand-navy text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-900 transition-colors"
+          >
+            View Plans
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
