@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud & Hosting Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-blue: #00adef;
+        --color-brand-navy: #005c88;
+      }
+
+      /* Custom border on top-left */
+      .custom-top-left-border::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-top: 2px solid #3b82f6; /* blue-500 */
+        border-left: 2px solid #3b82f6;
+        border-top-left-radius: 1rem; /* rounded-xl */
+      }
+      .nav-active {
+        color: #00b1f3 !important;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+         font-family: "Inter", sans-serif;
+      }
+
+       /* Bounce Y animation */
+      @keyframes bounceY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10%);
+        }
+      }
+
+      .bounceY {
+        animation: bounceY 15s infinite;
+      }
+
+      .cursor {
+        display: inline-block;
+        color: #00adef;
+        animation: blink 1s step-start infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <!-- Header/Navigation -->
+    <header
+      class="bg-white border-b border-gray-300 sticky top-0 z-50 py-[14px]"
+    >
+      <div class="max-w-[1790px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center lg:space-x-8">
+            <a href="/index.html">
+              <img
+              src="./images/Logo-01.png"
+              alt="Logo"
+              class="lg:w-[244px] h-auto"
+            />
+            </a>
+            <nav
+              class="hidden md:flex items-center space-x-12 mt-3 font-medium"
+            >
+              <a href="/index.html" class="font-[600]">Home</a>
+              <a
+                href="webhosting.html"
+                class="text-[#004964] hover:text-[#00B1F3] transition font-[600]"
+                >Web Hosting</a
+              >
+              <a
+                href="computer.html"
+                class="text-[#004964] hover:text-[#00B1F3] transition font-[600]"
+                >Compute</a
+              >
+              <a
+                href="#domain"
+                class="text-[#004964] hover:text-[#00B1F3] transition font-[600]"
+                >Domain</a
+              >
+
+             <!-- Dropdown -->
+              <div class="relative group ">
+                <button
+                  class="flex items-center text-[#004964] hover:text-[#00B1F3] transition focus:outline-none font-[600]"
+                >
+                  CloudOps
+                  <svg
+                    class="ml-1 w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.084l3.71-3.854a.75.75 0 111.08 1.04l-4.24 4.396a.75.75 0 01-1.08 0L5.21 8.29a.75.75 0 01.02-1.08z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="absolute hidden group-hover:block bg-[#E3F4FB] w-[250px] text-base font-extralight top-[25px] z-10"
+                >
+                   <a
+                    href="./managed-cloud.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >Managed Cloud</a
+                  >
+                  <a
+                    href="./devops-and-automation.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >DevOps And Automation</a
+                  >
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Desktop Menu -->
+
+          <!-- Auth Buttons -->
+          <div class="hidden md:flex items-center gap-8 font-bold">
+            <button
+              class="text-gray-700 hover:text-gray-900 font-semibold transition-colors"
+            >
+              Login
+            </button>
+            <button
+              class="bg-[#004964] text-white px-5 py-2 rounded-md hover:bg-blue-600 transition-colors"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden px-4 pt-4 pb-6 text-[15px] font-semibold"
+      >
+        <a
+          href="index.html"
+          class="block text-white py-3 px-2 border-b border-gray-300 bg-[#004964]"
+          >Home</a
+        >
+        <a
+          href="#hosting"
+          class="block text-black t py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
+          >Web Hosting</a
+        >
+        <a
+          href="#compute"
+          class="block text-black py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
+          >Compute</a
+        >
+        <a
+          href="#domain"
+          class="block text-black py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
+          >Domain</a
+        >
+        <div class="">
+          <a
+            href="#"
+            class="block text-black py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
+            >MenuCloud</a
+          >
+          <a
+            href="#"
+            class="block text-black py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
+            >DevOps</a
+          >
+        </div>
+        <div class="pt-4 flex flex-row gap-4 items-center">
+          <button
+            class="bg-[#005C88] text-white px-4 py-2 rounded-full hover:bg-blue-600"
+          >
+            Login
+          </button>
+          <button
+            class="bg-[#005C88] text-white px-4 py-2 rounded-full hover:bg-blue-600"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="bg-white py-20 px-5">
+      <div class="max-w-[1320px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="space-y-8 flex-1">
+            <div>
+              <h1
+                style="font-family: 'Poppins', sans-serif"
+                class="text-[22px] md:text-3xl lg:text-[34px] font-semibold text-[#004964] leading-tight"
+              >
+                <span class="whitespace-nowrap"
+                  >Fast, Secure & Scalable Virtual Servers –
+                </span>
+                Built for Developers
+              </h1>
+              <p class="text-[17px] text-gray-700 mt-6">
+                Deploy your applications on ultra-reliable Virtual Servers with
+                SSD storage. Enjoy full root access, 24/7 expert support, and
+                seamless scalability to grow with your needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Content - Image and Stats -->
+          <div class="relative">
+            <div class="relative bounceY">
+              <img
+                src="./images/computer/computer1.png"
+                alt="Professional working on laptop"
+                class="h-auto lg:max-w-[615px] rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="mt-10 px-2 md:px-4" id="pricing">
+      <div class="md:px-8 lg:px-16">
+        <div class="mb-24 md:mb-36">
+          <h2
+            class="text-[22px] md:text-3xl lg:text-[40px] mb-5 text-[#004964] text-center tracking-tighter leading-tight"
+          >
+            Customize Your<span class="text-brand-blue">
+              Cloud With ZenexCloud</span
+            >
+          </h2>
+          <p
+            class="md:w-9/12 mx-auto text-center capitalize text-[#004964] text-lg leading-relaxed"
+          >
+            Our ZenexCloud experts are here to help you find the perfect cloud
+            solution for your business needs—whether you're just starting out or
+            scaling fast, we’ll guide you every step of the way with
+            personalized support and reliable performance
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-8 items-start px-4 lg:px-0"
+        >
+          <!-- ZenVM1 Plan -->
+          <div
+            class="bg-gray-50 rounded-2xl border border-gray-200 hover:border-brand-navy transition-colors duration-500 p-8 relative lg:min-h-[650px]"
+          >
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">ZenVM 1</h3>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-6">
+              <div class="flex items-baseline">
+                <span class="text-sm text-gray-600">US$</span>
+                <span class="text-5xl font-semibold text-[#004964]">1.75</span>
+                <span class="text-gray-600 ml-1">/mo</span>
+              </div>
+              <p class="text-sm text-[#004964] mt-1">For 36-month term</p>
+            </div>
+
+            <!-- CTA Button -->
+            <button
+              class="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors mb-6 cursore-pointer"
+            >
+              Choose plan
+            </button>
+
+            <div class="text-xs text-gray-500 mb-6">
+              With 3-yr term. You pay $63.00 today. Renews at $63
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">1 vCPU core</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">1 GB RAM</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">10 GB NVMe SSD Storage</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Snapshot backups</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Linux only</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">cPanel or Plesk available</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">/30 IP available upon request</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Global data centers</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ZenVM2 Plan -->
+          <div
+            class="bg-gray-50 rounded-2xl border-2 border-brand-navy p-8 relative transform scale-105 lg:min-h-[635px]"
+          >
+            <!-- Most Popular Badge -->
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-full scale-x-[1.01]"
+            >
+              <div
+                class="bg-brand-navy text-white px-6 py-2 rounded-t-2xl border-2 border-brand-navy text-sm font-semibold text-center"
+              >
+                RECOMMENDED
+              </div>
+            </div>
+
+            <div class="mb-4 mt-3">
+              <h3 class="text-2xl font-bold text-gray-900">ZenVM 2</h3>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-6">
+              <div class="flex items-baseline">
+                <span class="text-sm text-gray-600">US$</span>
+                <span class="text-5xl font-semibold text-[#004964]">3.90</span>
+                <span class="text-gray-600 ml-1">/mo</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">For 36-month term</p>
+            </div>
+
+            <!-- CTA Button -->
+            <button
+              class="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors mb-6"
+            >
+              Choose plan
+            </button>
+
+            <div class="text-xs text-gray-500 mb-6">
+              With 3-yr term. You pay $141.00 today. Renews at $141.00
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">2 vCPU cores</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">2 GB RAM</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">40 GB NVMe SSD Storage</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Snapshot backups</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Linux or Windows compatible</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">cPanel or Plesk available</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700"
+                  >/30 IPs available upon request</span
+                >
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Global data centers</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ZenVM3 Plan -->
+          <div
+            class="bg-gray-50 rounded-2xl border border-gray-200 hover:border-brand-navy transition-colors duration-500 p-8 relative lg:min-h-[650px]"
+          >
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">ZenVM 3</h3>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-6">
+              <div class="flex items-baseline">
+                <span class="text-sm text-gray-600">US$</span>
+                <span class="text-5xl font-semibold text-[#004964]">8.40</span>
+                <span class="text-gray-600 ml-1">/mo</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">For 36-month term</p>
+            </div>
+
+            <!-- CTA Button -->
+            <button
+              class="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors mb-6"
+            >
+              Choose plan
+            </button>
+
+            <div class="text-xs text-gray-500 mb-6">
+              With 3-yr term. You pay $303.00 today. Renews at $303.00
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">2 vCPU cores</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">4 GB RAM</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">100 GB NVMe SSD Storage</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Snapshot backups</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Linux or Windows compatible</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">cPanel or Plesk available</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700"
+                  >/30 IPs available upon request</span
+                >
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Global data centers</span>
+              </li>
+            </ul>
+          </div>
+          <!-- ZenVM4 Plan -->
+          <div
+            class="bg-gray-50 rounded-2xl border border-gray-200 hover:border-brand-navy transition-colors duration-500 p-8 relative lg:min-h-[650px]"
+          >
+            <div class="mb-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">ZenVM 4</h3>
+            </div>
+
+            <!-- Pricing -->
+            <div class="mb-6">
+              <div class="flex items-baseline">
+                <span class="text-sm text-gray-600">US$</span>
+                <span class="text-5xl font-semibold text-[#004964]">12.90</span>
+                <span class="text-gray-600 ml-1">/mo</span>
+              </div>
+              <p class="text-sm text-gray-500 mt-1">For 12-month term</p>
+            </div>
+
+            <!-- CTA Button -->
+            <button
+              class="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors mb-6"
+            >
+              Choose plan
+            </button>
+
+            <div class="text-xs text-gray-500 mb-6">
+              With 3-yr term. You pay $465.00 today. Renews at $465.00
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-4">
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">4 vCPU cores</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">6 GB RAM</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">160 GB NVMe SSD Storage</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Snapshot backups</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Linux or Windows compatible</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">cPanel or Plesk available</span>
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700"
+                  >/30 IPs available upon request</span
+                >
+              </li>
+
+              <li class="flex items-start space-x-2">
+                <svg
+                  class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Global data centers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center my-16">
+        <button
+          class="py-4 px-8 bg-[#004964] text-white hover:bg-transparent hover:text-black transition-all duration-500 hover:scale-105 border-2 border-[#004964] rounded-md"
+        >
+          Explores Our Plans
+        </button>
+      </div>
+    </section>
+
+    <!-- Developer Section -->
+    <div class="bg-gray-50 px-4">
+      <div class="max-w-[1320px] mx-auto py-20">
+        <h1
+          class="text-2xl md:text-3xl lg:text-[40px] mb-12 text-center text-[#004964]"
+          style="font-family: 'Poppins', sans-serif"
+        >
+          Built for Developers,
+          <span class="text-brand-blue"> plgencies & System Adminsn</span>
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- item 1 -->
+          <div class="text-center px-4 py-6 border border-black rounded-md">
+            <div class="flex justify-center">
+              <img src="./images/computer/logo1.png" class="h-20" />
+            </div>
+            <h4 class="text-2xl text-[#005c88] font-semibold my-6">
+              Developer Ready
+            </h4>
+            <p class="text-sm text-center leading-relaxed">
+              Deploy apps, manage environments, and use Git, Docker, and CI/CD
+              pipelines with ease.
+            </p>
+          </div>
+          <!-- item 2 -->
+          <div class="text-center px-4 py-6 border border-black rounded-md">
+            <div class="flex justify-center">
+              <img src="./images/computer/logo2.png" class="h-24" />
+            </div>
+            <h4 class="text-2xl text-[#005c88] font-semibold my-6">
+              Secure & Isolated
+            </h4>
+            <p class="text-sm text-center leading-relaxed">
+              Each VM is private, with dedicated resources and advanced firewall
+              controls.
+            </p>
+          </div>
+          <!-- item 3 -->
+          <div class="text-center px-4 py-6 border border-black rounded-md">
+            <div class="flex justify-center">
+              <img src="./images/computer/logo3.png" class="h-24" />
+            </div>
+            <h4 class="text-2xl text-[#005c88] font-semibold my-6">
+              Instant Provisioning
+            </h4>
+            <p class="text-sm text-center leading-relaxed">
+              Launch your server in under 60 seconds.
+            </p>
+          </div>
+          <!-- item 4 -->
+          <div class="text-center px-4 py-6 border border-black rounded-md">
+            <div class="flex justify-center">
+              <img src="./images/computer/logo4.png" class="h-24" />
+            </div>
+            <h4 class="text-2xl text-[#005c88] font-semibold my-6">
+              Root Access
+            </h4>
+            <p class="text-sm text-center leading-relaxed">
+              Total control of your server configuration
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    `
+
+    <!-- Why ZenexCloud Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8" id="domain">
+      <div class="max-w-[1320px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          <!-- Left Content - Features -->
+          <div class="space-y-10">
+            <h2
+              class="text-2xl md:text-3xl lg:text-[40px] mb-12 text-[#004964] tracking-tighter leading-tight"
+            >
+              Why Choose <span class="text-brand-blue">ZenexCloud?</span>
+            </h2>
+
+            <!-- Features List -->
+            <div class="space-y-6">
+              <!-- Secure -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container.png" />
+                <div>
+                  <h3 class="text-2xl text-brand-navy mb-2">Cloud Security</h3>
+                  <p class="text-gray-600">
+                    Enterprise-grade firewalls, IAM, GDPR/ISO compliance
+                  </p>
+                </div>
+              </div>
+
+              <!-- Speed -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-1.png" />
+                <div>
+                  <h3 class="text-2xl text-brand-navy mb-2">Speed</h3>
+                  <p class="text-gray-600">
+                    Global CDN, SSD/NVMe storage, ultra-fast loading
+                  </p>
+                </div>
+              </div>
+
+              <!-- Scalability -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-2.png" alt="" />
+                <div>
+                  <h3 class="text-2xl text-brand-navy mb-2">Scalability</h3>
+                  <p class="text-gray-600">From solopreneurs to enterprises</p>
+                </div>
+              </div>
+
+              <!-- Support -->
+              <div class="flex items-center space-x-4">
+                <img src="./images/Icon container-3.png" alt="" />
+                <div>
+                  <h3 class="text-2xl text-brand-navy mb-2">Real Support</h3>
+                  <p class="text-gray-600">24/7 expert humans—not bots</p>
+                </div>
+              </div>
+              <!-- Global Infrastructure -->
+              <div class="flex items-center space-x-4">
+                <img
+                  src="./images/Icon-container-4.png"
+                  class="max-h-[90px]"
+                  alt=""
+                />
+                <div>
+                  <h3 class="text-2xl text-brand-navy mb-2">
+                    Global Infrastructure
+                  </h3>
+                  <p class="text-gray-600">
+                    Deployed across top-tier data centers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content - Images -->
+          <div class="relative">
+            <div class="relative">
+              <!-- Main Image -->
+              <div class="relative z-10">
+                <img
+                  src="./images/computer/man.png"
+                  class="md:max-w-[90%]"
+                  alt="Professional working in data center"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-white py-20 pb-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200"
+    >
+      <div class="">
+        <!-- Main Footer Navigation -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12 max-w-7xl mx-auto"
+        >
+          <!-- Hosting -->
+          <div>
+            <h3 class="text-lg font-bold text-brand-navy mb-4">Hosting</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Web hosting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >VPS hosting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Business email</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Cloud hosting</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Domain -->
+          <div>
+            <h3 class="text-lg font-bold text-brand-navy mb-4">Domain</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Domain name search</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Cheap domain names</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >WHOIS Lookup</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Domain transfer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Domain extensions</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Information -->
+          <div>
+            <h3 class="text-lg font-bold text-brand-navy mb-4">Information</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Reviews</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Affiliate program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Referral program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <h3 class="text-lg font-bold text-brand-navy mb-4">Company</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >About Hostinger</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Our technology</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div>
+            <h3 class="text-lg font-bold text-brand-navy mb-4">Support</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >Report abuse</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Middle Section - Logo, Payment Methods, Social Media -->
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between py-8 space-y-7 lg:space-y-0 max-w-7xl mx-auto"
+        >
+          <div class="space-y-4">
+            <!-- Logo -->
+            <img src="./images/Logo-01.png" alt="" />
+
+            <!-- Payment Methods -->
+            <div class="flex items-center space-x-4">
+              <div
+                class="flex flex-wrap space-y-2 space-x-[1.5px] lg:space-x-2"
+              >
+                <!-- Payment Method Icons -->
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#1434CB" />
+                    <path d="M8.5 5.5h7v5h-7z" fill="white" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#EB001B" />
+                    <circle cx="9" cy="8" r="4" fill="#FF5F00" />
+                    <circle cx="15" cy="8" r="4" fill="#F79E1B" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#0070BA" />
+                    <path d="M6 6h4v4H6z" fill="white" />
+                    <path d="M14 6h4v4h-4z" fill="white" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#00A651" />
+                    <path d="M8 6h8v4H8z" fill="white" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#6C5CE7" />
+                    <path d="M6 6h12v4H6z" fill="white" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#FF6B35" />
+                    <path d="M8 6h8v4H8z" fill="white" />
+                  </svg>
+                </div>
+                <div
+                  class="w-12 h-8 bg-gray-100 rounded border flex items-center justify-center"
+                >
+                  <svg class="lg:w-6 lg:h-4" viewBox="0 0 24 16" fill="none">
+                    <rect width="24" height="16" rx="2" fill="#1A1F71" />
+                    <path d="M6 6h12v4H6z" fill="white" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media and Legal Links -->
+          <div class="flex items-center md:items-end gap-6 space-x-6 flex-col">
+            <!-- Social Media -->
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-700 transition-colors">
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-700 hover:text-gray-600 transition-colors"
+              >
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Legal Links -->
+            <div class="flex space-x-4 text-sm">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                >Privacy policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                >Refund policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                >Terms of service</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 border-t border-gray-200">
+          <p class="text-center text-gray-500 text-sm">
+            Copyright © 2025 ZenexCloud. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Active link functionality
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+      function activateNavLink() {
+        let scrollY = window.pageYOffset;
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 80; // adjust for header height
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+              link.classList.remove("nav-active");
+              if (link.getAttribute("href") === "#" + section.id) {
+                link.classList.add("nav-active");
+              }
+            });
+          }
+        });
+      }
+
+      window.addEventListener("scroll", activateNavLink);
+
+      // Optional: Activate on click as well
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          navLinks.forEach((l) => l.classList.remove("nav-active"));
+          this.classList.add("nav-active");
+        });
+      });
+    </script>
+  </body>
+</html>
