@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cloud & Hosting Solutions</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+      <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
@@ -34,36 +36,38 @@
         scroll-behavior: smooth;
       }
       body {
-        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+         font-family: "Inter", sans-serif;
       }
     </style>
   </head>
 
   <body class="">
     <!-- Header/Navigation -->
-    <header
+   <header
       class="bg-white border-b border-gray-300 sticky top-0 z-50 py-[14px]"
     >
       <div class="max-w-[1790px] mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center lg:space-x-8">
-            <img
+            <a href="/index.html">
+              <img
               src="./images/Logo-01.png"
               alt="Logo"
               class="lg:w-[244px] h-auto"
             />
+            </a>
             <nav
-              class="hidden md:flex items-center space-x-12 mt-3 font-medium"
+              class="hidden xl:flex items-center space-x-12 mt-3 font-medium"
             >
               <a href="#" class="font-[600]">Home</a>
               <a
-                href="#hosting"
+                href="/webhosting.html"
                 class="text-[#004964] hover:text-[#00B1F3] transition font-[600]"
                 >Web Hosting</a
               >
               <a
-                href="#compute"
+                href="/computer.html"
                 class="text-[#004964] hover:text-[#00B1F3] transition font-[600]"
                 >Compute</a
               >
@@ -74,7 +78,7 @@
               >
 
               <!-- Dropdown -->
-              <div class="relative group">
+              <div class="relative group ">
                 <button
                   class="flex items-center text-[#004964] hover:text-[#00B1F3] transition focus:outline-none font-[600]"
                 >
@@ -92,17 +96,17 @@
                   </svg>
                 </button>
                 <div
-                  class="absolute hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-md mt-2 w-40 z-10"
+                  class="absolute hidden group-hover:block bg-[#E3F4FB] w-[250px] text-base font-extralight top-[25px] z-10"
                 >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-[#004964] hover:bg-gray-100 hover:text-[#00B1F3] transition"
-                    >MenuCloud</a
+                   <a
+                    href="./managed-cloud.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >Managed Cloud</a
                   >
                   <a
-                    href="#"
-                    class="block px-4 py-2 text-[#004964] hover:bg-gray-100 hover:text-[#00B1F3] transition"
-                    >DevOps</a
+                    href="./devops-and-automation.html"
+                    class="block px-4 py-2.5 text-[#004964] hover:bg-brand-navy hover:text-white transition-all duration-300"
+                    >DevOps And Automation</a
                   >
                 </div>
               </div>
@@ -112,7 +116,7 @@
           <!-- Desktop Menu -->
 
           <!-- Auth Buttons -->
-          <div class="hidden md:flex items-center gap-8 font-bold">
+          <div class="hidden xl:flex items-center gap-8 font-bold">
             <button
               class="text-gray-700 hover:text-gray-900 font-semibold transition-colors"
             >
@@ -126,7 +130,7 @@
           </div>
 
           <!-- Mobile Menu Toggle -->
-          <div class="md:hidden flex items-center">
+          <div class="xl:hidden flex items-center">
             <button id="menu-toggle" class="text-gray-700 focus:outline-none">
               <svg
                 class="w-6 h-6"
@@ -147,7 +151,7 @@
       </div>
 
       <!-- Mobile Menu -->
-     <div
+      <div
         id="mobile-menu"
         class="md:hidden hidden px-4 pt-4 pb-6 text-[15px] font-semibold"
       >
@@ -157,12 +161,12 @@
           >Home</a
         >
         <a
-          href="#hosting"
+          href="/webhosting.html"
           class="block text-black t py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
           >Web Hosting</a
         >
         <a
-          href="#compute"
+          href="/computer.html"
           class="block text-black py-3 px-2 border-b border-gray-300 hover:bg-[#004964] hover:text-white transition"
           >Compute</a
         >
@@ -206,19 +210,23 @@
           <div class="space-y-8">
             <div>
               <h1
+              data-aos="fade-up"
+               data-aos-duration="1000"
                 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
               >
                 Cloud & Hosting
                 <span class="text-brand-blue block">Solutions</span>
               </h1>
-              <p class="text-lg text-gray-600 mt-4 max-w-lg">
+              <p data-aos="fade-up"
+               data-aos-duration="1000" class="text-lg text-gray-600 mt-4 max-w-lg">
                 Get reliable Cloud, VPS, hosting, business email, domain
                 services, and more.
               </p>
             </div>
 
             <!-- Client Testimonial -->
-            <div class="flex items-center space-x-3">
+            <div data-aos="fade-up"
+               data-aos-duration="1000" class="flex items-center space-x-3">
               <div class="flex -space-x-2">
                 <img src="./images/Hero Stat Icons.png" alt="" />
               </div>
@@ -237,11 +245,15 @@
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <button
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
                   class="bg-brand-blue text-white px-8 py-3 rounded-full transition-colors"
                 >
                   Get Started
                 </button>
                 <button
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
                   class="border text-brand-navy px-8 py-3 rounded-full font- border-brand-navy transition-colors"
                 >
                   Our Services
@@ -251,7 +263,7 @@
           </div>
 
           <!-- Right Content - Image and Stats -->
-          <div class="relative">
+          <div  class="relative">
             <div class="relative">
               <img
                 src="./images/Hero Image Container.png"
@@ -317,13 +329,13 @@
 
     <!-- Pricing Section -->
     <section class="mt-10 px-4" id="pricing">
-         <div
+      <div
         class="section-title flex justify-center items-center flex-col text-center mb-10"
       >
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+        <h2 class="text-5xl font-light text-gray-900 mb-4">
           Explore <span class="text-brand-blue">Perfect Plan</span>
         </h2>
-        <p class="text-gray-600">
+        <p class="text-gray-600 mb-20">
           Start Smart, Scale Fast—ZenexCloud Powers Your Growth with Simple,
           Scalable Hosting
         </p>
@@ -334,6 +346,8 @@
         >
           <!-- ZenLite Plan -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 relative lg:h-[1145px]"
           >
             <div class="mb-6">
@@ -345,7 +359,7 @@
             </div>
 
             <!-- Pricing -->
-            <div class="mb-6">
+            <div  class="mb-6">
               <div class="flex items-baseline space-x-2 mb-2">
                 <span class="text-sm text-gray-500 line-through"
                   >US$ 10.99</span
@@ -627,10 +641,13 @@
 
           <!-- ZenCore Plan (Most Popular) -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-xl border-2 border-brand-navy p-8 relative transform scale-105 lg:h-[1120px]"
           >
             <!-- Most Popular Badge -->
             <div
+            
               class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-full scale-x-[1.01]"
             >
               <div
@@ -961,6 +978,8 @@
 
           <!-- ZenPro Plan -->
           <div
+          data-aos="fade-up"
+               data-aos-duration="1000"
             class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 relative lg:h-[1145px]"
           >
             <div class="mb-6">
@@ -1290,15 +1309,17 @@
     </section>
 
     <!-- Quick Service Navigator -->
-    <section class="py-16 px-5 lg:px-0" id="hosting">
+    <section class="py-16 px-5 lg:px-0 overflow-hidden" id="hosting">
       <div class="px-10 mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 class="xl:text-5xl lg:text-[36px] text-[26px]  font-light text-gray-900">
             Quick <span class="text-brand-blue">Service Navigator</span>
           </h2>
         </div>
 
         <div
+        data-aos="fade-left"
+               data-aos-duration="1000"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8"
         >
           <!-- Hosting -->
@@ -1508,7 +1529,7 @@
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-[#E6EFF3]" id="compute">
       <div class="max-w-[1320px] mx-auto">
         <!-- Section Header -->
-        <div class="text-center mb-12 mb-[60px]">
+        <div class="text-center mb-[60px]">
           <h2 class="text-4xl sm:text-5xl font-light">
             <span class="text-brand-navy">Our </span>
             <span class="text-brand-blue">Services</span>
@@ -1516,7 +1537,8 @@
         </div>
 
         <!-- Services Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-aos="fade-up"
+               data-aos-duration="1000" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Web Hosting -->
           <div
             class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
@@ -1795,7 +1817,8 @@
             </h2>
 
             <!-- Features List -->
-            <div class="space-y-6">
+            <div data-aos="fade-up"
+               data-aos-duration="1000" class="space-y-6">
               <!-- Secure -->
               <div class="flex items-center space-x-4">
                 <img src="./images/Icon container.png" />
@@ -1877,6 +1900,8 @@
       </div>
       <div class="max-w-6xl mx-auto text-center">
         <h2
+        data-aos="fade-up"
+               data-aos-duration="1000"
           class="text-xl sm:text-4xl font-medium text-gray-900 mb-8 leading-tight"
         >
           Switch to ZenexCloud — the high-performance, secure, and scalable
@@ -1885,11 +1910,15 @@
 
         <div class="flex flex-row gap-4 justify-center">
           <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
             class="bg-brand-blue text-white px-9 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors"
           >
             Sign Up
           </button>
           <button
+          data-aos="zoom-in-up"
+               data-aos-duration="1000"
             class="bg-brand-navy text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-900 transition-colors"
           >
             View Plans
@@ -2035,6 +2064,13 @@
                   href="#"
                   class="text-gray-600 hover:text-gray-900 transition-colors"
                   >Our technology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/about-page.html"
+                  class="text-gray-600 hover:text-gray-900 transition-colors"
+                  >About Us</a
                 >
               </li>
             </ul>
@@ -2191,6 +2227,9 @@
       </div>
     </footer>
     <script>
+
+      // Initialize AOS
+      AOS.init();
       const menuToggle = document.getElementById("menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
 
